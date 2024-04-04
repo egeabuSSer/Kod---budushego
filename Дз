@@ -1,0 +1,63 @@
+3 модуль
+1)
+string = input()
+
+if string.startswith('"') and string.endswith('"'):
+    print(string)
+else:
+    print(f'"{string}"')
+2)
+words, i = input().split(), int(input())
+if i == 0:
+    print(words[1], words[0])
+else:
+    print(*sorted(words))
+
+3)
+s = "I Do Love Python! Python is Cool!!!"
+n = len(s)
+
+while True:
+    i, j = int(input()), int(input())
+    if abs(i) < n and abs(j) < n:
+        break
+    print(f"Введите корректные значения\ni,j могут принимать значения: -{n}, {n})")
+
+print(s[i:j)
+4)
+string = input()
+newstring = ""
+
+for char in string:
+    if char.isdigit() and char != '0':
+        newstring += str(int(char) - 1)
+    else:
+        newstring += char
+
+print(newstring)
+5)
+text = input()
+outputtext = ""
+
+for char in text:
+    if char == ' ':
+        outputtext += '  '
+    else:
+        outputtext += char
+
+print(outputtext)
+6)
+text1 = input()
+text2 = input()
+
+outputtext = text1.replace(text2, "")
+print(outputtext)
+7)
+n = int(input())
+degrees = tuple(float(x) for x in range(0, (n+1)*30, 30))
+print(degrees)
+8)
+
+text = input()
+letters = sorted(list(set(letter.upper() for letter in text if 'A' <= letter.upper() <= 'Z')))
+print(letters)
